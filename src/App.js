@@ -7,7 +7,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h2>Welcome to your Todo App!</h2>
+        <h2>WunderWitch</h2>
+        <h3>A hex-management app</h3>
       </div>
     );
   }
