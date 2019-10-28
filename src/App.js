@@ -6,12 +6,12 @@ const data = [
   {
     hex: 'Smudge House',
     id: 1528817077286,
-    completed: false
+    cast: false
   },
   {
     hex: 'Hex the patriarchy',
     id: 1528817084358,
-    completed: false
+    cast: false
   }
 ];
 
@@ -28,7 +28,7 @@ class App extends React.Component {
     const newItem = {
       hex: hex,
       id: Date.now(),
-      purchased: false
+      cast: false
     };
     this.setState({
       hexes: [...this.state.hexes, newItem]
@@ -74,7 +74,7 @@ class App extends React.Component {
           toggleCast={this.toggleCast}
           hexes={this.state.hexes} />
         <TodoForm
-          // state={this.state}
+          state={this.state}
           setState={this.setState}
           addItems={this.addItems}
           handleChanges={this.handleChanges}
