@@ -13,26 +13,6 @@ const data = [
     id: 1528817084358,
     completed: false
   }
-  // {
-  //   hex: 'Manifest new party dress',
-  //   id: 1528817084358,
-  //   completed: false
-  // },
-  // {
-  //   hex: 'Invoke Gma Ursula for pie recipe',
-  //   id: 1528817084358,
-  //   completed: false
-  // },
-  // {
-  //   hex: 'ThinAir|ThickThighs Brownies',
-  //   id: 1528817084358,
-  //   completed: false
-  // },
-  // {
-  //   hex: 'Spiteful Demon, Re: Felix',
-  //   id: 1528817077286,
-  //   completed: false
-  // },
 ];
 
 
