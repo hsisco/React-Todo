@@ -39,10 +39,10 @@ class App extends React.Component {
     this.setState({
       hexes: this.state.hexes.map(todo => {
         if(todo.id === id){
-          return {
+          return ({
             ...todo,
             cast: !todo.cast
-          };
+          });
         } else {
           return todo;
         }
@@ -50,17 +50,30 @@ class App extends React.Component {
     });
   };
 
-  handleChanges = e => {
+  clearCast = e => {
     this.setState({
-      newItem: e.target.value
-    })
+      hexes: this.state.hexes.map(todo => {
+        if(todo.cast === true){
+          return (
+            { value: '' }
+          );
+        } else {
+          return todo;
+        }
+      })
+    });
+  };
+  
+
+  handleChanges = e => {
+    this.setState({newItem: e.target.value});
   };
 
   handleSubmit = e => {
     e.preventDefault();
     console.log("New hex submitted!");
     this.addItems(this.state.newItem);
-    this.setState({ newItem: '' });
+    this.setState({ value: '' });
   };
 
   render() {
@@ -78,7 +91,8 @@ class App extends React.Component {
           setState={this.setState}
           addItems={this.addItems}
           handleChanges={this.handleChanges}
-          handleSubmit={this.handleSubmit} />
+          handleSubmit={this.handleSubmit} 
+          clearCast={this.clearCast} />
       </div>
     );
   }

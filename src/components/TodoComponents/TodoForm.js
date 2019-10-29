@@ -3,7 +3,7 @@ import React from 'react';
 class TodoForm extends React.Component {
   constructor(props){
     super(props);
-    props.setState.hexes = {
+    this.props.setState.hexes = {
       newItem: ''
     }
   }
