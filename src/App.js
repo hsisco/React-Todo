@@ -15,7 +15,6 @@ const data = [
   }
 ];
 
-
 class App extends React.Component {
   constructor(){
     super();
@@ -36,6 +35,7 @@ class App extends React.Component {
   }
 
   toggleCast = id => {
+    console.log("This is the id")
     this.setState({
       hexes: this.state.hexes.map(todo => {
         if(todo.id === id){
@@ -77,6 +77,7 @@ class App extends React.Component {
   };
 
   render() {
+    console.log(this.state.hexes);
     return (
       <div className="App">
         <div className="header">

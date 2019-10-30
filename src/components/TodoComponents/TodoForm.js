@@ -20,7 +20,7 @@ class TodoForm extends React.Component {
           onChange={this.props.handleChanges}
           />
           <button type="submit">Add</button>
-          <button className="clear-btn" onClick={this.props.clearCast}>
+          <button type="button" className="clear-btn" onClick={this.props.clearCast}>
         Clear Hexes Cast
       </button>
       </form>
