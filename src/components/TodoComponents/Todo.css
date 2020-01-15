@@ -4,57 +4,50 @@ body {
   background-color: black;
   background-repeat: no-repeat;
   background-position: center top;
-
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 header {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  margin-top: 100vh;
+  margin-top: 15vh;
+  margin-bottom: 3vh;
 }
 h2 {
   text-align: center;
+  margin: 10px;
   color: #B71C1C;
-  font-size: 4rem;
-  margin: 100, auto, 20;
+  font-size: 4.2rem;
   font-family: 'UnifrakturCook', cursive;
-  animation: neon .08s ease-in-out infinite alternate;
-  @keyframes neon {
-    from {
-      text-shadow:
-      0 0 6px rgba(202,228,225,0.92),
-      0 0 30px rgba(202,228,225,0.34),
-      0 0 12px rgba(30,132,242,0.52),
-      0 0 21px rgba(30,132,242,0.92),
-      0 0 34px rgba(30,132,242,0.78),
-      0 0 54px rgba(30,132,242,0.92);
-    }
-    to {
-      text-shadow:
-      0 0 6px rgba(202,228,225,0.98),
-      0 0 30px rgba(202,228,225,0.42),
-      0 0 12px rgba(30,132,242,0.58),
-      0 0 22px rgba(30,132,242,0.84),
-      0 0 38px rgba(30,132,242,0.88),
-      0 0 60px rgba(30,132,242,1);
-    }
-  }
 }
 h3 {
   text-align: center;
   font-family: 'UnifrakturCook', cursive;
-  
+  font-size: 2.2rem;
+  margin: 10px;
 }
-.hex-list {
-  margin: 5vh, 40vw, 5vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
+input {
+  width: 20vw;
+  padding: 5px;
+  font-size: 1rem;
+  border-color: #B71C1C
+}
+button {
+  margin: 2vh;
+  font-size: 1.3rem;
+  font-family: 'UnifrakturCook', cursive;
+  border-color: #B71C1C
+}
+.clear-btn {
+  width: 200px;
+  text-align: center;
 }
 p {
   font-family: 'Beth Ellen', cursive;
-
+  font-size: 1.3rem;
 }
 .cast {
   text-decoration: line-through;

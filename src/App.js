@@ -9,6 +9,11 @@ const data = [
     cast: false
   },
   {
+    hex: 'Invoke Gma Ursula for pie recipe',
+    id: 1579068659537,
+    cast: false,
+  },
+  {
     hex: 'Hex the patriarchy',
     id: 1528817084358,
     cast: false
@@ -16,87 +21,73 @@ const data = [
 ];
 
 class App extends React.Component {
-  constructor(){
-    super();
-    this.state = {
-      hexes: data
-    };
-  }
+  state = {
+    hexes: data
+  };
 
   addItems = hex => {
-    const newItem = {
-      hex: hex,
-      id: Date.now(),
-      cast: false
+    const newState = {
+      ...this.state,
+      hexes: [
+        ...this.state.hexes,
+        {
+          hex: hex,
+          id: Date.now(),
+          cast: false
+        }
+      ]
     };
-    this.setState({
-      hexes: [...this.state.hexes, newItem]
-    });
+    this.setState(newState);
   }
 
   toggleCast = id => {
     console.log("This is the id")
-    this.setState({
+    const newState = {
+      ...this.state,
       hexes: this.state.hexes.map(todo => {
         if(todo.id === id){
           return ({
             ...todo,
             cast: !todo.cast
           });
-        } else {
-          return todo;
         }
+        return todo;
       })
-    });
+    };
+    this.setState(newState);
   };
 
-  clearCast = e => {
-    this.setState({
-      hexes: this.state.hexes.map(todo => {
-        if(todo.cast === true){
-          return (
-            { value: '' }
-          );
-        } else {
-          return todo;
-        }
+  clearCast = () => {
+    const newState = {
+      ...this.state,
+      hexes: this.state.hexes.filter(todo => {
+        return !todo.cast;
       })
-    });
-  };
-  
-
-  handleChanges = e => {
-    this.setState({newItem: e.target.value});
-  };
-
-  handleSubmit = e => {
-    e.preventDefault();
-    console.log("New hex submitted!");
-    this.addItems(this.state.newItem);
-    this.setState({ value: '' });
+    };
+    this.setState(newState);
   };
 
   render() {
     console.log(this.state.hexes);
     return (
       <div className="App">
-        <div className="header">
+        <header className="header">
           <h2>WunderWitch</h2>
-          <h3>A hex-management app</h3>
-        </div>
+          <h3>A Hex-management App</h3>
+        </header>
+        
+        <TodoForm
+          addItems={this.addItems} />
+
+        <button type="button" className="clear-btn" onClick={this.clearCast}>
+          Clear Hexes Cast
+        </button>
+
         <TodoList
           toggleCast={this.toggleCast}
           hexes={this.state.hexes} />
-        <TodoForm
-          state={this.state}
-          setState={this.setState}
-          addItems={this.addItems}
-          handleChanges={this.handleChanges}
-          handleSubmit={this.handleSubmit} 
-          clearCast={this.clearCast} />
       </div>
     );
   }
 }
-
 export default App;

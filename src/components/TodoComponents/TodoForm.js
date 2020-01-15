@@ -1,29 +1,35 @@
 import React from 'react';
 
 class TodoForm extends React.Component {
-  constructor(props){
-    super(props);
-    this.props.setState.hexes = {
-      newItem: ''
-    }
+  constructor(){
+    super();
+    this.state = {
+      newItem: ""
+    };
   }
 
-  render(props){
+  handleChanges = e => {
+    this.setState({ ...this.state, newItem: e.target.value });
+  };
+
+  handleSubmit = e => {
+    e.preventDefault();
+    this.props.addItems(this.state.newItem);
+  }
+
+  render(){
     return(
-      <form onSubmit={this.props.handleSubmit}>
-        <label htmlFor="todo">New Hex</label>
-        <input
-          type="text"
-          name="todo"
-          id="todo"
-          value={this.props.newItem}
-          onChange={this.props.handleChanges}
-          />
-          <button type="submit">Add</button>
-          <button type="button" className="clear-btn" onClick={this.props.clearCast}>
-        Clear Hexes Cast
-      </button>
-      </form>
+      <div className="hex-form">
+        <form onSubmit={this.handleSubmit}>
+          <input
+            type="text"
+            name="item"
+            value={this.state.newItem}
+            onChange={this.handleChanges}
+            />
+          <button type="submit">Add Hex</button>
+        </form>
+      </div>
     );
   }
 }
