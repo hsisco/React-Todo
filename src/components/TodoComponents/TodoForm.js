@@ -22,13 +22,16 @@ class TodoForm extends React.Component {
       <div className="hex-form">
         <form onSubmit={this.handleSubmit}>
           <input
+            onChange={this.handleChanges}
             type="text"
             name="item"
             value={this.state.newItem}
-            onChange={this.handleChanges}
             />
           <button type="submit">Add Hex</button>
         </form>
+        <button type="button" className="clear-btn" onClick={this.props.clearCast}>
+          Clear Hexes Cast
+        </button>
       </div>
     );
   }

@@ -77,11 +77,8 @@ class App extends React.Component {
         </header>
         
         <TodoForm
-          addItems={this.addItems} />
-
-        <button type="button" className="clear-btn" onClick={this.clearCast}>
-          Clear Hexes Cast
-        </button>
+          addItems={this.addItems} 
+          clearCast={this.clearCast}/>
 
         <TodoList
           toggleCast={this.toggleCast}
