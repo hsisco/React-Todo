@@ -16,6 +16,7 @@ class TodoForm extends React.Component {
     e.preventDefault();
     this.props.addItems(this.state.newItem);
     this.setState({ ...this.state, newItem: ""});
+    localStorage.setItem(this.state, JSON.stringify(this.state.newItem))
   };
 
   render(){

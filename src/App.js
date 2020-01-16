@@ -41,7 +41,7 @@ class App extends React.Component {
   }
 
   toggleCast = id => {
-    console.log("This is the id")
+    // console.log("This is the id")
     const newState = {
       ...this.state,
       hexes: this.state.hexes.map(todo => {
