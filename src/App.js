@@ -38,6 +38,24 @@ class App extends React.Component {
     this.setState(newState);
   }
 
+  toggleCast = id => {
+    console.log("This is the id")
+    const newState = {
+      ...this.state,
+      hexes: this.state.hexes.map(todo => {
+        if(todo.id === id){
+          return ({
+            ...todo,
+            cast: !todo.cast
+          });
+        }
+        return todo;
+      })
+    };
+    this.setState(newState);
+  };
+
+  
   render() {
     console.log(this.state.hexes);
     return (
