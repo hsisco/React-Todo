@@ -1,4 +1,6 @@
 import React from 'react';
+import TodoList from './components/TodoComponents/TodoList';
+import TodoForm from './components/TodoComponents/TodoForm';
 
 const data = [
   {
@@ -54,7 +56,7 @@ class App extends React.Component {
     };
     this.setState(newState);
   };
-  
+
   clearCast = () => {
     const newState = {
       ...this.state,
