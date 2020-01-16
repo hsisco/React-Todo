@@ -15,7 +15,8 @@ class TodoForm extends React.Component {
   handleSubmit = e => {
     e.preventDefault();
     this.props.addItems(this.state.newItem);
-  }
+    this.setState({ ...this.state, newItem: ""});
+  };
 
   render(){
     return(
@@ -27,9 +28,14 @@ class TodoForm extends React.Component {
             name="item"
             value={this.state.newItem}
             />
-          <button type="submit">Add Hex</button>
+          <button type="submit">
+            Add Hex
+          </button>
         </form>
-        <button type="button" className="clear-btn" onClick={this.props.clearCast}>
+        <button 
+          type="button"
+          className="clear-btn"
+          onClick={this.props.clearCast}>
           Clear Hexes Cast
         </button>
       </div>

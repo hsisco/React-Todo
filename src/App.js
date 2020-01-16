@@ -4,7 +4,7 @@ import TodoForm from './components/TodoComponents/TodoForm';
 
 const data = [
   {
-    hex: 'Smudge House',
+    hex: 'Smudge home',
     id: 1528817077286,
     cast: false
   },
