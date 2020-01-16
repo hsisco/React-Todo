@@ -54,8 +54,17 @@ class App extends React.Component {
     };
     this.setState(newState);
   };
-
   
+  clearCast = () => {
+    const newState = {
+      ...this.state,
+      hexes: this.state.hexes.filter(todo => {
+        return !todo.cast;
+      })
+    };
+    this.setState(newState);
+  };
+
   render() {
     console.log(this.state.hexes);
     return (
