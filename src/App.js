@@ -23,6 +23,21 @@ class App extends React.Component {
     hexes: data
   };
   
+  addItems = hex => {
+    const newState = {
+      ...this.state,
+      hexes: [
+        ...this.state.hexes,
+        {
+          hex: hex,
+          id: Date.now(),
+          cast: false
+        }
+      ]
+    };
+    this.setState(newState);
+  }
+
   render() {
     console.log(this.state.hexes);
     return (
