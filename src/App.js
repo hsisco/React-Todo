@@ -23,9 +23,21 @@ class App extends React.Component {
   // design `App` to be the parent component of your application.
   // this component is going to take care of state, and any change handlers you need to work with your state
   render() {
+    console.log(this.state.hexes);
     return (
-      <div>
-        <h2>Welcome to your Todo App!</h2>
+      <div className="App">
+        <header className="header">
+          <h2>WunderWitch</h2>
+          <h3>A Hex-management App</h3>
+        </header>
+        
+        <TodoForm
+          addItems={this.addItems} 
+          clearCast={this.clearCast}/>
+
+        <TodoList
+          toggleCast={this.toggleCast}
+          hexes={this.state.hexes} />
       </div>
     );
   }
