@@ -1,0 +1,54 @@
+body {
+  width: 100%;
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8bdec6bc-0ef4-4d9c-bf67-5fdaaea0b446/d48ubt0-56b4bc61-7abe-4c87-a333-7e51702f8821.png/v1/fill/w_900,h_1284,strp/old_paper_stock_02_by_ftourini_d48ubt0-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4NCIsInBhdGgiOiJcL2ZcLzhiZGVjNmJjLTBlZjQtNGQ5Yy1iZjY3LTVmZGFhZWEwYjQ0NlwvZDQ4dWJ0MC01NmI0YmM2MS03YWJlLTRjODctYTMzMy03ZTUxNzAyZjg4MjEucG5nIiwid2lkdGgiOiI8PTkwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.Qm9-I5rfyO7jI8P-VkcVdVLtlC2UlO-e3jpLtJWix98");
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+header {
+  margin-top: 15vh;
+  margin-bottom: 3vh;
+}
+h2 {
+  text-align: center;
+  margin: 10px;
+  color: #B71C1C;
+  font-size: 4.2rem;
+  font-family: 'UnifrakturCook', cursive;
+}
+h3 {
+  text-align: center;
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 2.2rem;
+  margin: 10px;
+}
+input {
+  width: 20vw;
+  padding: 5px;
+  font-size: 1rem;
+  border-color: #B71C1C
+}
+button {
+  margin: 2vh;
+  font-size: 1.3rem;
+  font-family: 'UnifrakturCook', cursive;
+  border-color: #B71C1C
+}
+.clear-btn {
+  width: 200px;
+  text-align: center;
+}
+p {
+  font-family: 'Beth Ellen', cursive;
+  font-size: 1.3rem;
+}
+.cast {
+  text-decoration: line-through;
+}
