@@ -8,6 +8,15 @@ class TodoForm extends React.Component {
     };
   }
 
+  handleChanges = e => {
+    this.setState({ ...this.state, newItem: e.target.value });
+  };
+
+  handleSubmit = e => {
+    e.preventDefault();
+    this.props.addItems(this.state.newItem);
+  }
+
   render(){
     return(
       <div className="hex-form">
